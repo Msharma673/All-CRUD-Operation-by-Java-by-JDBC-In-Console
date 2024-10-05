@@ -103,16 +103,16 @@ public class CRUDOperations {
 
         // Execute the query and display the results
         try (ResultSet resultSet = preparedStatement.executeQuery()) {
-            if (!resultSet.isBeforeFirst()) {
-                System.out.println("No records found.");
-            } else {
+//            if (!resultSet.isBeforeFirst()) {
+//                System.out.println("No records found.");
+//            } else {
                 while (resultSet.next()) {
                     System.out.println("ID: " + resultSet.getInt("id") +
                             ",      Name: " + resultSet.getString("fac_name") +
                             ",      Email: " + resultSet.getString("fac_email") +
                             ",      Address: " + resultSet.getString("fac_address"));
                 }
-            }
+//            }
         }
     }
 
@@ -199,10 +199,10 @@ public class CRUDOperations {
         ResultSet resultSet = selectStatement.executeQuery();
 
         // Check if record exists
-        if (!resultSet.isBeforeFirst()) {  // No data found
-            System.out.println("No matching record found.");
-            return;
-        }
+//        if (!resultSet.isBeforeFirst()) {  // No data found
+//            System.out.println("No matching record found.");
+//            return;
+//        }
 
         // Show the current record to the user
         while (resultSet.next()) {
